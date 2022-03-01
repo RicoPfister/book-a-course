@@ -5,9 +5,11 @@
   <title>Bootstrap Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -35,7 +37,7 @@
                   <li><a href="#">AGB</a></li>
                 </ul>
               </li>
-              <li><a href="course_booking.html">Kurse</a></li>
+              <li><a href="course_overview.html">Kurse</a></li>
               <li><a href="#">Kontakt</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -48,19 +50,39 @@
 
       <!-- content -->
         
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-sm-4">
-          </div>
-            <div class="col-sm-4 text-center">
-             <h2>Vielen Dank für deine Kursanmeldung!</h2><br>
-             <h4>Bitte bestätige noch deine E-Mail-Adresse.</h4><br>
-             <h4>Ich wünsche dir viel Spass und viel Erfolg mit dem Kurs.</h4><br>
-             <a class="btn btn-success" href="course_overview.html" role="button">Zurück zur Kursübersicht</a>
-            </div>
-          <div class="col-sm-4">
-          </div>
-        </div>
+      <div class="container">
+        <h2>Hover Rows</h2>
+        <p>The .table-hover class enables a hover state on table rows:</p>            
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>Column</th>
+              <th>Lastname</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>John</td>
+              <td>Doe</td>
+              <td>john@example.com</td>
+            </tr>
+            <tr>
+              <td>Mary</td>
+              <td>Moe</td>
+              <td>mary@example.com</td>
+            </tr>
+            <tr>
+              <td>July</td>
+              <td>Dooley</td>
+              <td>july@example.com</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="container">
+        <p class="d-xl-none">Hidden P</p>
       </div>
 
     <!-- footer -->

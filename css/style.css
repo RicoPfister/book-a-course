@@ -1,0 +1,84 @@
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    background-color: black;
+    color: white;
+    text-align: center;
+ }
+
+ #footerText {
+    margin-bottom: 0;
+ }
+
+ .navbar navbar-inverse {
+     background: lavender;
+ }
+
+/* neuer style */
+
+
+.table, progressBar {
+    width: fit-content;
+    margin: auto;
+}	
+
+.lightgray {
+    color: lightgray;
+}
+
+.forestgreen {
+    color: forestgreen;
+    font-weight: bold;
+}
+
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+#course {
+    color: lime;
+}
+
+#login {
+    color: olive;
+}
+    
+.mainHeading {
+    margin-top: 5rem
+}
+
+.blank {
+    height: 10vw;
+}
+
+#sendInput {
+    background: black;
+}
+
+#del {
+    background: rgb(78,22,9);
+}
+
+.randGen  {
+    background: white;
+}
+
+#dummyDataNote {
+    margin-top: 10px;
+    color: grey;  
+}
+
+.dropdown-menu {
+    background: black;
+    color: white;
+}
+
+@media screen and (max-width: 308px) {
+    body {
+      background-color: pink;
+    }
+  }
