@@ -19,7 +19,6 @@
 
 /* neuer style */
 
-
 .table, progressBar {
     width: fit-content;
     margin: auto;
@@ -82,3 +81,4 @@ a, a:hover, a:focus, a:active {
       background-color: pink;
     }
   }
+

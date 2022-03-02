@@ -8,7 +8,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/confirmation.css">
     
 </head>
 
@@ -61,150 +61,211 @@
 
 <!-- course details -->
 
-    <br><h2 class="mainHeading text-center">Kursbuchung</h2><br>
+<br><h2 class="mainHeading text-center">Kursbuchung</h2><br>
 
 <!-- progressbar -->
 
 <div class="progressBar d-flex justify-content-center">
-<div class="position-relative m-4 col-5">
+<div class="position-relative m-4 col-4">
   <div class="progress" style="height: 1px;">
     <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
   </div>
   <button type="button" class="position-absolute top-0 start-0 translate-middle btn btn-sm btn-success rounded-pill" style="width: 2rem; height:2rem;">1</button>
-  <button type="button" class="position-absolute top-0 start-50 translate-middle btn btn-sm btn-dark rounded-pill" style="width: 2rem; height:2rem;">2</button>
+  <button type="button" class="position-absolute top-0 start-50 translate-middle btn btn-sm btn-success rounded-pill" style="width: 2rem; height:2rem;">2</button>
   <button type="button" class="position-absolute top-0 start-100 translate-middle btn btn-sm btn-dark rounded-pill" style="width: 2rem; height:2rem;">3</button>
 </div>
 </div>
 
-<!-- form personal data -->
+<!-- confirmation -->
 
-<div class="container mt-3 col-lg-5">
-  <br><h2>Persönliche Angaben</h2><br>
-  <form action="" onsubmit="return checkUserData()">
+<div class="container col-md-4">
 
-    <div class="input-group">
-      <div class="col-lg-2">
-      <select class="form-select" id="gen">
-        <option selected>Anr.</option>
-        <option value=""></option>
-        <option value="female">Frau</option>
-        <option value="male">Herr</option>
-      </select>
-      </div>
-      <div class="col-lg-5">
-        <label for="sel1" class="form-label"></label>
-        <input type="text" aria-label="First name" class="form-control" placeholder="Vorname" id="firstName">
-      </div>
+<br><h2>Sind die Angaben korrekt?</h2><br>
 
-      <div class="col-lg-5">
-        <input type="text" aria-label="Last name" class="form-control" placeholder="Nachname" id="lastName">
-      </div>
+  <div class="row">
+
+    <div class="col-sm-3 fw-bold">
+    <p>Name</p>
     </div>
 
-    <div class="input-group mt-3">
-      <div class="col-lg-8">
-      <input type="text" aria-label="addresse" class="form-control" placeholder="Adresse" id="address">
-    </div>
-      
-      <div class="col-lg-4">
-      <input type="text" aria-label="addresse addition" class="form-control" placeholder="Nummer/Zusatz" id="addressAdd">
-      </div>
-    </div>
-   
-    <div class="input-group mt-3">
-      <div class="col-lg-3">
-        <input type="text" aria-label="postal code" class="form-control" placeholder="PLZ" id="postCode">
-      </div>
-
-      <div class="col-lg-9">
-      <input type="text" aria-label="location" class="form-control" placeholder="Ort" id="location">
-    </div>
+    <div class="col">
+    <p id="name"></p>
     </div>
 
-   <div class="input-group mt-3">
-     <div class="col-lg-12">
-          <input type="text" aria-label="location" class="form-control" placeholder="Telefon (tagsüber erreichbar)" id="phone">
-    </div>
   </div>
 
+  <div class="row">
 
-<!-- form log in -->
+    <div class="col-sm-3 fw-bold">
+    <p>Adresse</p>
+    </div>
 
-  <br><h2>Onlinezugang (Login)</h2><br>
-   
-    <div class="input-group">
-      <div class="col-lg-6">
-      <input type="text" aria-label="First name" class="form-control" placeholder="Benutzername" name="username" id="userName">
-      </div>
-            <div class="col-lg-6">
-      <input type="text" aria-label="Last name" class="form-control" placeholder="E-Mail" name="email" id="email">
-      </div>
+    <div class="col">
+    <p id="address"></p>
     </div>
-  
-    <div class="input-group mt-3">
-      <div class="col-lg-6">
-      <input type="text" aria-label="addresse" class="form-control" placeholder="Passwort" name="password" id="password">
+
+  </div>
+
+  <br>
+
+  <div class="row">
+
+    <div class="col-sm-3 fw-bold">
+    <p>Telefon</p>
     </div>
-    <div class="col-lg-6">
-      <input type="text" aria-label="addresse" class="form-control" placeholder="Passwort wiederholen" id="passwordCheck">
-   </div>
+
+    <div class="col">
+    <p id="phone"></p>
+    </div>
+
+  </div>
+
+  <br>
+
+  <div class="row">
+
+    <div class="col-sm-3 fw-bold">
+    <p>Nutzername</p>
+    </div>
+
+    <div class="col">
+    <p id="userName"></p>
+    </div>
+
+  </div>
+
+  <div class="row">
+
+    <div class="col-sm-3 fw-bold">
+    <p>E-Mail</p>
+    </div>
+
+    <div class="col">
+    <p id="email"></p>
+    </div>
+
+  </div>
+
+  <br>
+
+  <div class="row">
+
+    <div class="col-sm-3 fw-bold">
+    <p>Kurs</p>
+    </div>
+
+    <div class="col">
+    <p id="course">02 Grundlage: Hypertext Markup Language (HTML)</p>
+    </div>
+
+  </div>
+
+  <div class="row">
+
+    <div class="col-sm-3 fw-bold">
+    <p>Datum</p>
+    </div>
+
+    <div class="col">
+    <p id="course">01.03.2023 - 08.03.2023</p>
+    </div>
+
+  </div>
+
+  <div class="row">
+
+    <div class="col-sm-3 fw-bold">
+    <p>Anforderung</p>
+    </div>
+
+    <div class="col">
+    <p id="course">Stufe 1</p>
+    </div>
+
+  </div>
+
+  <div class="row">
+
+    <div class="col-sm-3 fw-bold">
+    <p>Kurssprache</p>
+    </div>
+
+    <div class="col">
+    <p id="course">Deutsch</p>
+    </div>
+
+  </div>
+
+  <div class="row">
+
+    <div class="col-sm-3 fw-bold">
+    <p>Kursleitung</p>
+    </div>
+
+    <div class="col">
+    <p id="course">J. Schneider</p>
+    </div>
+
+  </div>
+
+  <br>
+
+  <div class="row">
+
+    <div class="col-sm-3 fw-bold">
+    <p>Kosten:</p>
+    </div>
+
+    <div class="col">
+    <p id="cost">250.00 Franken</p>
+    </div>
+
+  </div>
+
+  <div class="row">
+
+    <div class="col-sm-3 fw-bold">
+    <p>Bezahlart:</p>
+    </div>
+
+    <div class="col">
+    <p id="paymentMethode"></p>
+    </div>
+
+  </div>
+
+  <br>
+
+  <div class="row">
+
+    <div class="col-sm-3 fw-bold">
+    <p>AGB:</p>
+    </div>
+
+    <div class="col">
+    <p id="agb"></p>
+    </div>
+
+  </div>
+
+  <div class="row">
+
+    <div class="col-sm-3 fw-bold">
+    <p>Newsletter:</p>
+    </div>
+
+    <div class="col">
+    <p id="newsletter"></p>
+    </div>
+
+  </div>
+
+  <br>
+
+  <button type="button" class="btn btn-success">Kurs buchen</button>
+  <button type="button" class="btn btn-dark" onclick="goBackToBooking()">Angaben ändern</button>
+
 </div>
-
-<!-- form creditcard -->
-
-  <br><h2>Zahlungsangaben</h2>
-
-  <div class="input-group">
-    <div class="col-lg-3">
-    <label for="sel1" class="form-label"></label>
-    <select class="form-select" id="paymentMethode" name="sellist1">
-      <option>Zahlungsart</option>
-      <option>Visa</option>
-      <option>Mastercard</option>
-    </select>
-    </div>
-    </div>
-
-    <div class="input-group mt-3">
-      <div class="col-lg-6">
-      <input type="text" aria-label="First name" class="form-control" placeholder="Kreditkartennummer" name="ccN" id="ccN">
-      </div>
-      <div class="col-lg-6">
-      <input type="text" aria-label="Last name" class="form-control" placeholder="Inhaber" name="ccO" id="ccO">
-      </div>
-    </div>
-  
-    <div class="input-group mt-3">
-      <div class="col-lg-6">
-      <input type="text" aria-label="addresse" class="form-control" placeholder="Ablaufdatum" name="ccED" id="ccED">
-    </div>
-    <div class="col-lg-6">
-      <input type="text" aria-label="addresse" class="form-control" placeholder="CVV/CVC" name="ccV" id="ccV">
-   </div>
-   </div>
-
-<!-- form checks -->
-
-<br><h2>Abschlussbestimmung</h2>
-  
-  <div>
-    <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="agb" name="agb">
-      <label class="form-check-label" for="agb">Ich akzeptiere die AGBs</label>
-      </div>
-   
-        <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="newsletter" name="newsletter">
-      <label class="form-check-label" for="newsletter">Ich melde mich für den Newsletter an</label>
-   
-    </div>
-    
-    <button class="btn btn-primary mt-3" type="submit" id="sendInput">Weiter</button>
-    <button class="btn btn-primary mt-3" type="button" id="del">Angaben löschen</button>
-    <p id="dummyDataNote">[!for testing only! generate dummy data: ctrl+alt+g]</p>
-    
-    </div>
-     </form>
 
 <!-- blank div -->
 
@@ -221,7 +282,7 @@
   <!-- Copyright -->
 </footer>
 
-<script src="js/code.js"></script>  
+<script src="js/confirmation.js"></script>  
 
 </body>
 </html>
