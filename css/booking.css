@@ -39,41 +39,19 @@ a, a:hover, a:focus, a:active {
 }
 
 #course {
-    color: lime;
-}
-
-#login {
-    color: olive;
+    color: red;
 }
     
 .mainHeading {
-    margin-top: 5rem
+    margin-top: 6rem
 }
 
 .blank {
     height: 10vw;
 }
 
-#sendInput {
-    background: black;
-}
-
-#del {
-    background: rgb(78,22,9);
-}
-
 .randGen  {
     background: white;
-}
-
-#dummyDataNote {
-    margin-top: 10px;
-    color: grey;  
-}
-
-.dropdown-menu {
-    background: black;
-    color: white;
 }
 
 @media screen and (max-width: 308px) {
@@ -87,17 +65,13 @@ a, a:hover, a:focus, a:active {
     margin-top: 28px;
 }
 
+.bottom-label2{
+    color: red;
+}
+
 .firstName {
     background: red;
 }
-
-.form-control:focus ~ .form-notch div {
-    border-color: red !important;
-  }
-  
-  .form-control:focus ~ .form-label {
-    color: red !important;
-  }
 
 
 

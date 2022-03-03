@@ -8,10 +8,6 @@ function seSto(a) {
 return sessionStorage.getItem(userData[a]);
 }
 
-function goBackToBooking(){
-    window.open("course_booking.html", "_self")
-}
-
 userDataIds();
 
 document.getElementById("name").innerHTML = `${seSto(0)} ${seSto(1)} ${seSto(2)}`;

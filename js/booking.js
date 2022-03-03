@@ -6,7 +6,7 @@ function userDataIds() {
 }
 
 function dummyUserData() {
-    dummyUser =  ["Herr", "Rick", "Carlton", "Bahnhofstrasse", "1", "079 123 45 67", "Zürich", "8000", "W3bN00b9k", "rick.carlton@gmail.com", "My@Password@Is@Not@Safe@666", "My@Password@Is@Not@Safe@666", "Visa", "1234567890", "Rick Carlton", "12/26", "123", "akzeptiert"
+    dummyUser =  ["Herr", "Rick", "Carlton", "Bahnhofstrasse", "1", "079 123 45 67", "Zürich", "8000", "W3bN00b9k", "rick.carlton@gmail.com", "My@Pa$$word@Is@Not@Safe@666", "My@Password@Is@Not@Safe@123", "Visa", "1234567890", "Rick Carlton", "12/26", "123", "akzeptiert"
 ]
 }
 
@@ -34,12 +34,14 @@ function clearData(){
 
 userDataIds();
 
-for(i=0; i<userData.length; i++){
+for(i=0; i<userData.length-1; i++){
 
 let check = sessionStorage.getItem(userData[i])
 document.getElementById(userData[i]).value = check;
 
-} 
+if(sessionStorage.getItem("newsletter") != "on"){
+document.getElementById("newsletter").checked = true;
+} else {document.getElementById("newsletter").checked = false}
 
 let valTest;
 
@@ -49,27 +51,33 @@ function checkUserData() {
 
     userDataIds();
 
-    for(i=0; i<17; i++)
+    for(i=0; i<userData.length-1; i++)
 
     if(document.getElementById(userData[i]).value === ""){
       document.getElementById("valID_"+userData[i]).innerHTML  = "Angabe fehlt";
-      valTest = 1;
+      valError = 1;      
     }
 
-    if(valTest == 1){
+    if(document.getElementById("agb").checked == false){
+        document.getElementById("valID_agb").innerHTML  = "Angabe fehlt";
+         valError = 1;
+        }
+
+     if(valError == 1){
+        valError = 0;
         return false;
     }
 
     for(i=0; i<userData.length; i++){
     let check = document.getElementById(userData[i]).value;
-    sessionStorage.setItem(userData[i], check);
+    sessionStorage.setItem(userData[i], check);    
     }    
 }
 
-// event listener klick invalid field
+// clear all booking data
 
 function clearInvalid(a){
     document.getElementById("valID_"+a).innerHTML = "";
 }
-    
 
+}
