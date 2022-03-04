@@ -1,7 +1,7 @@
 ## Versionsverlauf
 
 1. Version 1 (Präsentation): Funktionierende Grundversion von Kursliste bis Thankyou-Seite der Klasse vorgeführt.
-2. Version 2.1 (Nachbearbeitung): Unter Floating Labels Warnung-Batches hinzugefügt. Verwendung von <span> und position-absolute.
+2. Version 2.1 (Nachbearbeitung): Unter Floating Labels Warnung-Batches hinzugefügt. Verwendung von \<span\> und position-absolute.
 3. Version 2.2 (Nachbearbeitung): E-Mail- und Passwortvalidation hinzugefügt.
 
 ## Obstacles
