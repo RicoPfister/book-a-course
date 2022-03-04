@@ -14,7 +14,7 @@ Automatische Datenfelder-Ausfüllung auf Buchungsseite: ctrl+alt+y
   
 ## Links
   
-https://www.figma.com/file/yi5HT2bHh18SSX90EDnuVa/book-a-course?node-id=2%3A3
+Figma Wirefraem: https://www.figma.com/file/yi5HT2bHh18SSX90EDnuVa/book-a-course?node-id=2%3A3
   
 ## Tagebuchversuch
 
