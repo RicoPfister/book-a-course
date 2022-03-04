@@ -26,7 +26,7 @@
     	
 	    <div class="navbar-header pull-left justify-content-start">
       <ul class="navbar-nav pull-left">
-      <li class="nav-item pull-left fs-5 text-danger"><a href="course_list_full.html" class="nav-link" id="course">Kurse</a></li>
+      <li class="nav-item pull-left fs-5"><a href="course_list_full.html" class="nav-link" id="course">Kurse</a></li>
        </ul>
 	       </div>	
 	
@@ -77,13 +77,13 @@
 
 <!-- form personal data -->
 
-<div class="container mt-3 col-lg-5">
-  <br><h2>Persönliche Angaben</h2><br>
+<div class="container col-lg-5">
+  <br><h2>Persönliche Angaben</h2>
   <form id="registrationForm" action="course_check.html" onsubmit="return checkUserData()">
 
-    <div class="input-group">
+    <div class="input-group my-3">
 
-      <div class="form-floating col-lg-3">
+      <div class="form-floating col-lg-3 mb-3">
         <select class="form-select" onclick="clearInvalid(this.id)" id="gen" aria-label="Floating label select example">
           <option selected></option>
           <option value=""></option>
@@ -94,8 +94,7 @@
         <label  id="valID_gen" class="bottom-label" for="floatingSelect"></label> 
       </div>
 
-      <div class="form-floating mb-3 col-sm">
-        
+      <div class="form-floating col-sm mb-3">        
         <input onclick="clearInvalid(this.id)" type="text" aria-label="Vorname" class="form-control" placeholder="Vorname" name="firstName" id="firstName">
         <label class="top-label" for="firstName">Vorname</label>
         <label  id="valID_firstName" class="bottom-label" for="firstName"></label>        
@@ -108,8 +107,8 @@
       </div>
     </div>
 
-    <div class="input-group mt-3">
-      <div class="form-floating col-lg-8">
+    <div class="input-group mb-3">
+      <div class="form-floating col-lg-8 mb-3">
       <input onclick="clearInvalid(this.id)" type="text" aria-label="Adresse" class="form-control" placeholder="Adresse" name="address" id="address">
       <label for="address">Adresse</label>
       <label  id="valID_address" class="bottom-label" for="address"></label>  
@@ -123,21 +122,21 @@
     </div>
    
     <div class="input-group mt-3">
-      <div class="form-floating col-lg-3">
+      <div class="form-floating col-lg-3 mb-3">
         <input onclick="clearInvalid(this.id)" type="text" aria-label="postal code" class="form-control" placeholder="PLZ" name="postCode" id="postCode">
         <label for="postCode">Nummer/Zusatz</label>
         <label  id="valID_postCode" class="bottom-label" for="postCode"></label> 
       </div>
 
-      <div class="form-floating col-lg-9">
+      <div class="form-floating col-lg-9 mb-3">
       <input onclick="clearInvalid(this.id)" type="text" aria-label="location" class="form-control" placeholder="Ort" name="location" id="location">
       <label for="location">Ort</label>
       <label  id="valID_location" class="bottom-label" for="location"></label> 
     </div>
     </div>
 
-   <div class="input-group mt-3">
-     <div class="form-floating col-lg-12">
+   <div class="input-group mb-3">
+     <div class="form-floating col-lg-12 mb-3">
           <input onclick="clearInvalid(this.id)" type="text" aria-label="location" class="form-control" placeholder="Telefon (tagsüber erreichbar)" name="phone" id="phone">
           <label for="phone">Telefon (tagsüber erreichbar)</label>
           <label  id="valID_phone" class="bottom-label" for="phone"></label> 
@@ -146,10 +145,10 @@
 
 <!-- form log in -->
 
-  <br><h2>Onlinezugang (Login)</h2><br>
+  <h2>Onlinezugang (Login)</h2>
    
-    <div class="input-group">
-      <div class="form-floating col-lg-6">
+    <div class="input-group my-4">
+      <div class="form-floating col-lg-6 mb-3">
       <input onclick="clearInvalid(this.id)" type="text" aria-label="First name" class="form-control" placeholder="Benutzername" name="userName" id="userName">
       <label for="userName">Benutzername</label>
       <label  id="valID_userName" class="bottom-label" for="userName"></label> 
@@ -161,8 +160,8 @@
       </div>
     </div>
   
-    <div class="input-group mt-3">
-      <div class="form-floating col-lg-6">
+    <div class="input-group mb-3">
+      <div class="form-floating col-lg-6 mb-3">
       <input onclick="clearInvalid(this.id)" type="text" aria-label="addresse" class="form-control" placeholder="Passwort" name="password" id="password">
       <label for="password">Passwort</label>
       <label  id="valID_password" class="bottom-label" for="password"></label> 
@@ -176,12 +175,13 @@
 
 <!-- form creditcard -->
 
-  <br><h2>Zahlungsangaben</h2>
+  <h2>Zahlungsangaben</h2>
 
   <div class="input-group">
-    <div class="form-floating col-lg-3">
+    <div class="form-floating col-lg-3 mt-3">
      <select class="form-select" onclick="clearInvalid(this.id)" id="paymentMethode" name="paymentMethode">
-       <option>Visa</option>
+      <option></option>
+      <option>Visa</option>
       <option>Mastercard</option>
     </select>
     <label for="paymentMethode">Bezahlart</label>
@@ -189,8 +189,8 @@
     </div>
     </div>
 
-    <div class="input-group mt-3">
-      <div class="form-floating col-lg-6">
+    <div class="input-group my-3">
+      <div class="form-floating col-lg-6 mb-3">
       <input onclick="clearInvalid(this.id)" type="text" aria-label="First name" class="form-control" placeholder="Kreditkartennummer" name="ccN" id="ccN">
       <label for="ccN">Kreditkartennummer</label>
       <label  id="valID_ccN" class="bottom-label" for="ccN"></label> 
@@ -203,12 +203,12 @@
     </div>
   
     <div class="input-group mt-3">
-      <div class="form-floating col-lg-6">
+      <div class="form-floating col-lg-6 mb-3">
       <input onclick="clearInvalid(this.id)" type="text" aria-label="addresse" class="form-control" placeholder="Ablaufdatum" name="ccED" id="ccED">
       <label for="ccED">Ablaufdatum</label>
       <label  id="valID_ccED" class="bottom-label" for="ccED"></label> 
     </div>
-    <div class="form-floating col-lg-6">
+    <div class="form-floating col-lg-6 mb-3">
       <input onclick="clearInvalid(this.id)" type="text" aria-label="addresse" class="form-control" placeholder="CVV/CVC" name="ccV" id="ccV">
       <label for="ccV">CVV/CVC</label>
       <label  id="valID_ccV" class="bottom-label" for="ccV"></label> 
@@ -217,27 +217,23 @@
 
 <!-- form checks -->
 
-<br><h2>Abschlussbestimmung</h2>
+<h2 class="my-3">Abschlussbestimmung</h2>
   
-  
-    <div class="form-check">
-      <input onclick="clearInvalid(this.id)" type="checkbox" class="form-check-input" id="agb" name="agb">
+      <div class="form-check">
+      <input onclick="clearInvalid(this.id)" type="checkbox" class="form-check-input " id="agb" name="agb">
       <label class="form-check-label" for="agb">Ich akzeptiere die AGBs</label>
       <label id="valID_agb" class="bottom-label2" for="agb"></label>
-
     </div>
    
         <div class="form-check">
       <input type="checkbox" class="form-check-input" id="newsletter" name="newsletter">
-      <label class="form-check-label" for="newsletter">Ich melde mich für den Newsletter an</label>
-   
+      <label class="form-check-label" for="newsletter">Ich melde mich für den Newsletter an</label>   
     </div>
     
     <button class="btn btn-success mt-3" type="submit" id="sendInput">Weiter</button>
     <button class="btn btn-dark mt-3" type="submit" onclick="window.location.href ='course_list_full.html'" id="sendInput">Zurück</button>
     <button class="btn btn-dark mt-3" type="button" id="del" onclick="clearData()">Löschen</button>
-    <p class="mt-3 text-danger">[fill in test dummy data: ctrl+alt+y]</p>
-    
+    <p class="mt-3 text-danger">[fill in test dummy data: ctrl+alt+y]</p>    
     </div>
      </form>
 

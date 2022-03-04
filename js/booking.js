@@ -39,11 +39,13 @@ for(i=0; i<userData.length-1; i++){
 let check = sessionStorage.getItem(userData[i])
 document.getElementById(userData[i]).value = check;
 
-if(sessionStorage.getItem("newsletter") != "on"){
+if(sessionStorage.getItem("newsletter") === "akzeptiert"){
 document.getElementById("newsletter").checked = true;
 } else {document.getElementById("newsletter").checked = false}
 
-let valTest;
+}
+
+let valError = "notSet";
 
 // data validation
 
@@ -51,27 +53,34 @@ function checkUserData() {
 
     userDataIds();
 
-    for(i=0; i<userData.length-1; i++)
+    // check data and set warning-label
 
-    if(document.getElementById(userData[i]).value === ""){
-      document.getElementById("valID_"+userData[i]).innerHTML  = "Angabe fehlt";
-      valError = 1;      
-    }
+    for(i=0; i<userData.length-1; i++){
 
-    if(document.getElementById("agb").checked == false){
-        document.getElementById("valID_agb").innerHTML  = "Angabe fehlt";
-         valError = 1;
+        if(document.getElementById(userData[i]).value === ""){
+        document.getElementById("valID_"+userData[i]).innerHTML  = "Angabe fehlt";
+        valError = 1;}
+
+        if(document.getElementById("agb").checked == false){
+            document.getElementById("valID_agb").innerHTML  = "Angabe fehlt";
+            valError = 1;}
+
+        }  
+
+        if(valError == 1){
+            valError = 0;
+            return false;
         }
+     
+        // set sessionStorage
 
-     if(valError == 1){
-        valError = 0;
-        return false;
-    }
+        for(i=0; i<userData.length; i++){
+        let check = document.getElementById(userData[i]).value;
+        sessionStorage.setItem(userData[i], check);}
 
-    for(i=0; i<userData.length; i++){
-    let check = document.getElementById(userData[i]).value;
-    sessionStorage.setItem(userData[i], check);    
-    }    
+        if (document.getElementById("newsletter").checked == false){
+        sessionStorage.setItem("newsletter", "")}
+    
 }
 
 // clear all booking data
@@ -80,4 +89,3 @@ function clearInvalid(a){
     document.getElementById("valID_"+a).innerHTML = "";
 }
 
-}

@@ -17,4 +17,14 @@ document.getElementById("userName").innerHTML = `${seSto(8)}`;
 document.getElementById("email").innerHTML = `${seSto(9)}`;
 document.getElementById("paymentMethode").innerHTML = `${seSto(12)}`;
 document.getElementById("agb").innerHTML = "akzeptiert";
+
+if(`${seSto(17)}` === ""){
+    document.getElementById("newsletter").innerHTML = "nicht erwünscht";
+} else {
 document.getElementById("newsletter").innerHTML = `${seSto(17)}`;
+}
+
+function sendData(){
+    sessionStorage.clear();
+    window.location.href = "course_thankyou.html";
+}
