@@ -9,7 +9,7 @@ Code ist ein Durcheinander. Beim nächsteen Code-Projekt Naming vereinheitlichen
 4. Wie überschreibe ich Bootstrap-Class-Anweisungen mit CSS? Viel herumprobieren nötig.
 5. Viele Wiederholungen im Code nötig? Bootstrap braucht wirklich so viele DIVs? Hilft PHP oder SASS Dinge zu vereinfachen?
 
-## importieren von HTML/CSS
+## Importieren von HTML/CSS
 
 Header und Footer in Seite extern einfügbar? Auf jeder Seite Nav/Footer ändern ist mühsam und unnötig.
 
