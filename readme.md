@@ -10,7 +10,7 @@ siehe eigenes md-file
 
 ## Tweaks
 
-Automatische Datenfelder-Ausfüllung auf Buchungsseite: ctrl+alt+y]
+Automatische Datenfelder-Ausfüllung auf Buchungsseite: ctrl+alt+y
   
 ## Links
   
