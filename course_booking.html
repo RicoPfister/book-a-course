@@ -1,24 +1,243 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap 5 Example</title>
+  <title>Kursbuchung</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+ 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <link rel="stylesheet" href="css/booking.css">
+    
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
 </head>
 <body>
-​
-<div class="container-fluid p-5 bg-primary text-white text-center">
-  <h1>My First Bootstrap Page</h1>
-  <p>Resize this responsive page to see the effect!</p> 
+
+<!-- nav -->
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-start fixed-top">
+  <div class="container-fluid justify-content-start">
+   
+    <a class="navbar-brand" href="#"><img src="logo.svg" alt="" height="40"></a>
+    	
+	    <div class="navbar-header pull-left justify-content-start">
+      <ul class="navbar-nav pull-left">
+      <li class="nav-item pull-left fs-5"><a href="course_list_full.html" class="nav-link" id="course">Kurse</a></li>
+       </ul>
+	       </div>	
+	
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+	  
+        <li class="nav-item dropdown">
+          <a class="nav-link fs-5" href="#" role="button" data-bs-toggle="dropdown">Über uns</a>
+		          <ul class="dropdown-menu">
+            <li><a class="dropdown-item fs-5" href="#">Geschichte</a></li>
+            <li><a class="dropdown-item fs-5" href="#">AGB</a></li>
+			        </li>
+          </ul>
+		  <li class="nav-item">
+          <a class="nav-link fs-5" href="#">Kontakt</a>
+        </li> 
+        <li class="nav-item">
+          <a class="nav-link fs-5" id="login" href="#">Login</a>
+        </li> 
+
+      </ul>
+	  	
+	</div>
+	
+	    <button class="navbar-toggler justify-content-end ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+	
+  </div>
+</nav>
+
+<!-- course details -->
+
+<h2 class="mainHeading text-center">Kursbuchung</h2><br>
+
+<!-- progressbar -->
+
+<div class="progressBar d-flex justify-content-center">
+<div class="position-relative m-4 col-5">
+  <div class="progress" style="height: 1px;">
+    <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+  <button type="button" class="position-absolute top-0 start-0 translate-middle btn btn-sm btn-success rounded-pill" style="width: 2rem; height:2rem;">1</button>
+  <button type="button" class="position-absolute top-0 start-50 translate-middle btn btn-sm btn-dark rounded-pill" style="width: 2rem; height:2rem;">2</button>
+  <button type="button" class="position-absolute top-0 start-100 translate-middle btn btn-sm btn-dark rounded-pill" style="width: 2rem; height:2rem;">3</button>
 </div>
-  
-<div class="container mt-12">
-  <div class="row">
-    <div class="col-sm-5">
-      <h3>Column 1</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+</div>
+
+<!-- form personal data -->
+
+<div class="container col-md-5">
+  <br><h2>Persönliche Angaben</h2>
+  <form id="registrationForm" action="course_check.html" onsubmit="return checkUserData()">
+
+    <div class="input-group my-3">
+
+      <div class="form-floating col-lg-3"><span id="valID_gen" class="position-absolute top-100 start-0 translate-middle-y ms-2 badge rounded-pill bg-danger"></span>
+        <select class="form-select" onclick="clearInvalid(this.id)" id="gen" aria-label="Floating label select example">
+          <option selected></option>
+          <option value=""></option>
+          <option value="Herr">Herr</option>
+          <option value="Frau">Frau</option>
+        </select>
+        <label for="gen">Anrede</label>
+      </div>
+
+      <div class="form-floating col-sm"><span id="valID_firstName" class="position-absolute top-100 start-0 translate-middle-y ms-2 badge rounded-pill bg-danger"></span>    
+        <input onclick="clearInvalid(this.id)" type="text" aria-label="Vorname" class="form-control" placeholder="Vorname" name="firstName" id="firstName">
+        <label class="top-label" for="firstName">Vorname</label>         
+      </div>
+
+      <div class="form-floating col-sm"><span id="valID_lastName" class="position-absolute top-100 start-0 translate-middle-y ms-2 badge rounded-pill bg-danger"></span>
+        <input onclick="clearInvalid(this.id)" type="text" aria-label="Nachname" class="form-control" placeholder="Nachname" name="lastName" id="lastName">
+        <label for="lastName">Nachname</label>    
+      </div>
+	  
     </div>
+
+    <div class="input-group my-3">
+      <div class="form-floating col-lg-8"><span id="valID_address" class="position-absolute top-100 start-0 translate-middle-y ms-2 badge rounded-pill bg-danger"></span>
+      <input onclick="clearInvalid(this.id)" type="text" aria-label="Adresse" class="form-control" placeholder="Adresse" name="address" id="address">
+      <label for="address">Adresse</label>
+    </div>
+      
+      <div class="form-floating col-lg-4"><span id="valID_addressAdd" class="position-absolute top-100 start-0 translate-middle-y ms-2 badge rounded-pill bg-danger"></span>
+      <input onclick="clearInvalid(this.id)" type="text" aria-label="Nummer/Zusatz" class="form-control" placeholder="Nummer/Zusatz" name="addressAdd" id="addressAdd">
+      <label for="addressAdd">Nummer/Zusatz</label>
+      </div>
+    </div>
+   
+    <div class="input-group my-3">
+      <div class="form-floating col-lg-3"><span id="valID_postCode" class="position-absolute top-100 start-0 translate-middle-y ms-2 badge rounded-pill bg-danger"></span>
+        <input onclick="clearInvalid(this.id)" type="text" aria-label="postal code" class="form-control" placeholder="PLZ" name="postCode" id="postCode">
+        <label for="postCode">PLZ</label>
+      </div>
+
+      <div class="form-floating col-lg-9"><span id="valID_location" class="position-absolute top-100 start-0 translate-middle-y ms-2 badge rounded-pill bg-danger"></span>
+      <input onclick="clearInvalid(this.id)" type="text" aria-label="location" class="form-control" placeholder="Ort" name="location" id="location">
+      <label for="location">Ort</label>
+    </div>
+    </div>
+
+   <div class="input-group my-3">
+     <div class="form-floating col-lg-12"><span id="valID_phone" class="position-absolute top-100 start-0 translate-middle-y ms-2 badge rounded-pill bg-danger"></span>
+          <input onclick="clearInvalid(this.id)" type="text" aria-label="location" class="form-control" placeholder="Mobiltelefon" name="phone" id="phone">
+          <label for="phone">Mobiltelefon</label>
+    </div>
+  </div>
+
+<!-- form log in -->
+
+  <h2>Onlinezugang (Login)</h2>
+   
+    <div class="input-group my-3">
+      <div class="form-floating col-lg-6"><span id="valID_userName" class="position-absolute top-100 start-0 translate-middle-y ms-2 badge rounded-pill bg-danger"></span>
+      <input onclick="clearInvalid(this.id)" type="text" aria-label="First name" class="form-control" placeholder="Benutzername" name="userName" id="userName">
+      <label for="userName">Benutzername</label>
+      </div>
+            <div class="form-floating col-lg-6"><span id="valID_email" class="position-absolute top-100 start-0 translate-middle-y ms-2 badge rounded-pill bg-danger"></span>
+      <input onclick="clearInvalid(this.id)" type="text" aria-label="Last name" class="form-control" placeholder="E-Mail" name="email" id="email">
+      <label for="email">E-Mail</label>
+      </div>
+    </div>
+  
+    <div class="input-group my-3">
+      <div class="form-floating col-lg-6"><span id="valID_password" class="position-absolute top-100 start-0 translate-middle-y ms-2 badge rounded-pill bg-danger"></span>
+      <input onclick="clearInvalid(this.id)" type="text" aria-label="addresse" class="form-control" placeholder="Passwort" name="password" id="password">
+      <label for="password">Passwort</label>
+    </div>
+    <div class="form-floating col-lg-6"><span id="valID_passwordCheck" class="position-absolute top-100 start-0 translate-middle-y ms-2 badge rounded-pill bg-danger"></span>
+      <input onclick="clearInvalid(this.id)" type="text" aria-label="addresse" class="form-control" placeholder="Passwort wiederholen" name="passwordCheck" id="passwordCheck">
+      <label for="passwordCheck">Passwort wiederholen</label>
+   </div>
+</div>
+
+<!-- form creditcard -->
+
+  <h2>Zahlungsangaben</h2>
+
+  <div class="input-group my-3">
+    <div class="form-floating col-lg-3"><span id="valID_paymentMethode" class="position-absolute top-100 start-0 translate-middle-y ms-2 badge rounded-pill bg-danger"></span>
+     <select class="form-select" onclick="clearInvalid(this.id)" id="paymentMethode" name="paymentMethode">
+      <option></option>
+      <option>Visa</option>
+      <option>Mastercard</option>
+    </select>
+    <label for="paymentMethode">Bezahlart</label>
+    </div>
+    </div>
+
+    <div class="input-group my-3">
+      <div class="form-floating col-lg-6">
+      <input onclick="clearInvalid(this.id)" type="text" aria-label="First name" class="form-control" placeholder="Kreditkartennummer" name="ccN" id="ccN">
+      <label for="ccN">Kreditkartennummer<span id="valID_ccN" class="position-absolute top-100 start-0 translate-middle-y ms-2 badge rounded-pill bg-danger"></span></label>
+      </div>
+      <div class="form-floating col-lg-6">
+      <input onclick="clearInvalid(this.id)" type="text" aria-label="Last name" class="form-control" placeholder="Inhaber" name="ccO" id="ccO">
+      <label for="ccO">Inhaber<span id="valID_ccO" class="position-absolute top-100 start-0 translate-middle-y ms-2 badge rounded-pill bg-danger"></span></label>
+      </div>
+    </div>
+  
+    <div class="input-group my-3">
+      <div class="form-floating col-lg-6">
+      <input onclick="clearInvalid(this.id)" type="text" aria-label="addresse" class="form-control" placeholder="Ablaufdatum" name="ccED" id="ccED">
+      <label for="ccED">Ablaufdatum<span id="valID_ccED" class="position-absolute top-100 start-0 translate-middle-y ms-2 badge rounded-pill bg-danger"></span></label>
+    </div>
+    <div class="form-floating col-lg-6">
+      <input onclick="clearInvalid(this.id)" type="text" aria-label="addresse" class="form-control" placeholder="CVV/CVC" name="ccV" id="ccV">
+      <label for="ccV">CVV/CV<span id="valID_ccV" class="position-absolute top-100 start-0 translate-middle-y ms-2 badge rounded-pill bg-danger"></span></label>
+   </div>
+   </div>
+
+<!-- form checks -->
+
+<h2 class="mt-3">Abschlussbestimmung</h2>
+  
+      <div class="form-check">
+      <input onclick="clearInvalid(this.id)" type="checkbox" class="form-check-input " id="agb" name="agb">
+      <label class="form-check-label" for="agb">Ich akzeptiere die AGBs<span id="valID_agb" class="bottom-label2 ms-1 badge rounded-pill text-white bg-danger"></span></label>
+    </div>
+   
+        <div class="form-check">
+      <input type="checkbox" class="form-check-input" id="newsletter" name="newsletter">
+      <label class="form-check-label" for="newsletter">Ich melde mich für den Newsletter an</label>   
+    </div>
+    
+    <button class="btn btn-success mt-3" type="submit" id="sendInput">Weiter</button>
+    <button class="btn btn-dark mt-3" type="submit" onclick="window.location.href ='course_list_full.html'" id="sendInput">Zurück</button>
+    <button class="btn btn-dark mt-3" type="button" id="del" onclick="clearData()">Löschen</button>
+    <p class="mt-3 text-danger">[fill in test dummy data: ctrl+alt+y]</p>    
+    </div>
+     </form>
+
+<!-- blank div -->
+
+<div class="blank"></div>
+
+<!-- footer -->
+
+<footer class="bg-light text-center text-lg-start mt-auto">
+  <!-- Copyright -->
+  <div class="text-center p-2" style="background-color: white;">
+    © 2022 Copryight  | 
+    <a class="text-dark" href="#">AGB</a><br>
+  </div>
+  <!-- Copyright -->
+</footer>
+
+<script src="js/booking.js"></script>  
+
+</body>
+</html>
+
+

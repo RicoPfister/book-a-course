@@ -1,0 +1,12 @@
+.table {
+    width: fit-content;
+    margin: auto;
+}
+
+.mainHeading {
+    margin-top: 6rem
+}
+
+#course {
+    color: red;
+}

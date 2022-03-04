@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- collapsible navbar -->
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand" href="#">Ricos Kursseite</a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Über uns <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Geschichte</a></li>
+                  <li><a href="#">Werte</a></li>
+                  <li><a href="#">AGB</a></li>
+                </ul>
+              </li>
+              <li><a href="course_booking.html">Kurse</a></li>
+              <li><a href="#">Kontakt</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+              <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- content -->
+        
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-4">
+          </div>
+            <div class="col-sm-4 text-center">
+             <h2>Vielen Dank für deine Kursanmeldung!</h2><br>
+             <h4>Bitte bestätige noch deine E-Mail-Adresse.</h4><br>
+             <h4>Ich wünsche dir viel Spass und viel Erfolg mit dem Kurs.</h4><br>
+             <a class="btn btn-success" href="course_overview.html" role="button">Zurück zur Kursübersicht</a>
+            </div>
+          <div class="col-sm-4">
+          </div>
+        </div>
+      </div>
+
+    <!-- footer -->
+
+    <div class="footer">
+        <p id="footerText">Copyright 2022 | AGB | Kontakt</p>
+    </div>
+
+  </body>
+</html>
