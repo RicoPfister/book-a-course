@@ -59,10 +59,13 @@ a, a:hover, a:focus, a:active {
       background-color: pink;
     }
   }
+  
+ .form-floating {
+ 
+ }
 
 .bottom-label{
     color: red;
-    margin-top: 28px;
 }
 
 .bottom-label2{
@@ -72,6 +75,8 @@ a, a:hover, a:focus, a:active {
 .firstName {
     background: red;
 }
+
+
 
 
 

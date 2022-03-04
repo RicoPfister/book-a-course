@@ -77,13 +77,13 @@
 
 <!-- form personal data -->
 
-<div class="container col-lg-5">
+<div class="container col-md-5">
   <br><h2>Persönliche Angaben</h2>
   <form id="registrationForm" action="course_check.html" onsubmit="return checkUserData()">
 
     <div class="input-group my-3">
 
-      <div class="form-floating col-lg-3 mb-3">
+      <div class="form-floating col-lg-3"><span id="valID_gen" class="position-absolute top-100 start-0 translate-middle-y ms-2 badge rounded-pill bg-danger"></span>
         <select class="form-select" onclick="clearInvalid(this.id)" id="gen" aria-label="Floating label select example">
           <option selected></option>
           <option value=""></option>
@@ -91,55 +91,48 @@
           <option value="Frau">Frau</option>
         </select>
         <label for="gen">Anrede</label>
-        <label  id="valID_gen" class="bottom-label" for="floatingSelect"></label> 
       </div>
 
-      <div class="form-floating col-sm mb-3">        
+      <div class="form-floating col-sm"><span id="valID_firstName" class="position-absolute top-100 start-0 translate-middle-y ms-2 badge rounded-pill bg-danger"></span>    
         <input onclick="clearInvalid(this.id)" type="text" aria-label="Vorname" class="form-control" placeholder="Vorname" name="firstName" id="firstName">
-        <label class="top-label" for="firstName">Vorname</label>
-        <label  id="valID_firstName" class="bottom-label" for="firstName"></label>        
+        <label class="top-label" for="firstName">Vorname</label>         
       </div>
 
-      <div class="form-floating col-sm">
+      <div class="form-floating col-sm"><span id="valID_lastName" class="position-absolute top-100 start-0 translate-middle-y ms-2 badge rounded-pill bg-danger"></span>
         <input onclick="clearInvalid(this.id)" type="text" aria-label="Nachname" class="form-control" placeholder="Nachname" name="lastName" id="lastName">
-        <label for="lastName">Nachname</label>
-        <label  id="valID_lastName" class="bottom-label" for="lastName"></label>        
+        <label for="lastName">Nachname</label>    
       </div>
+	  
     </div>
 
-    <div class="input-group mb-3">
-      <div class="form-floating col-lg-8 mb-3">
+    <div class="input-group my-3">
+      <div class="form-floating col-lg-8"><span id="valID_address" class="position-absolute top-100 start-0 translate-middle-y ms-2 badge rounded-pill bg-danger"></span>
       <input onclick="clearInvalid(this.id)" type="text" aria-label="Adresse" class="form-control" placeholder="Adresse" name="address" id="address">
       <label for="address">Adresse</label>
-      <label  id="valID_address" class="bottom-label" for="address"></label>  
     </div>
       
-      <div class="form-floating col-lg-4">
+      <div class="form-floating col-lg-4"><span id="valID_addressAdd" class="position-absolute top-100 start-0 translate-middle-y ms-2 badge rounded-pill bg-danger"></span>
       <input onclick="clearInvalid(this.id)" type="text" aria-label="Nummer/Zusatz" class="form-control" placeholder="Nummer/Zusatz" name="addressAdd" id="addressAdd">
       <label for="addressAdd">Nummer/Zusatz</label>
-      <label  id="valID_addressAdd" class="bottom-label" for="addressAdd"></label> 
       </div>
     </div>
    
-    <div class="input-group mt-3">
-      <div class="form-floating col-lg-3 mb-3">
+    <div class="input-group my-3">
+      <div class="form-floating col-lg-3"><span id="valID_postCode" class="position-absolute top-100 start-0 translate-middle-y ms-2 badge rounded-pill bg-danger"></span>
         <input onclick="clearInvalid(this.id)" type="text" aria-label="postal code" class="form-control" placeholder="PLZ" name="postCode" id="postCode">
-        <label for="postCode">Nummer/Zusatz</label>
-        <label  id="valID_postCode" class="bottom-label" for="postCode"></label> 
+        <label for="postCode">PLZ</label>
       </div>
 
-      <div class="form-floating col-lg-9 mb-3">
+      <div class="form-floating col-lg-9"><span id="valID_location" class="position-absolute top-100 start-0 translate-middle-y ms-2 badge rounded-pill bg-danger"></span>
       <input onclick="clearInvalid(this.id)" type="text" aria-label="location" class="form-control" placeholder="Ort" name="location" id="location">
       <label for="location">Ort</label>
-      <label  id="valID_location" class="bottom-label" for="location"></label> 
     </div>
     </div>
 
-   <div class="input-group mb-3">
-     <div class="form-floating col-lg-12 mb-3">
-          <input onclick="clearInvalid(this.id)" type="text" aria-label="location" class="form-control" placeholder="Telefon (tagsüber erreichbar)" name="phone" id="phone">
-          <label for="phone">Telefon (tagsüber erreichbar)</label>
-          <label  id="valID_phone" class="bottom-label" for="phone"></label> 
+   <div class="input-group my-3">
+     <div class="form-floating col-lg-12"><span id="valID_phone" class="position-absolute top-100 start-0 translate-middle-y ms-2 badge rounded-pill bg-danger"></span>
+          <input onclick="clearInvalid(this.id)" type="text" aria-label="location" class="form-control" placeholder="Mobiltelefon" name="phone" id="phone">
+          <label for="phone">Mobiltelefon</label>
     </div>
   </div>
 
@@ -147,29 +140,25 @@
 
   <h2>Onlinezugang (Login)</h2>
    
-    <div class="input-group my-4">
-      <div class="form-floating col-lg-6 mb-3">
+    <div class="input-group my-3">
+      <div class="form-floating col-lg-6"><span id="valID_userName" class="position-absolute top-100 start-0 translate-middle-y ms-2 badge rounded-pill bg-danger"></span>
       <input onclick="clearInvalid(this.id)" type="text" aria-label="First name" class="form-control" placeholder="Benutzername" name="userName" id="userName">
       <label for="userName">Benutzername</label>
-      <label  id="valID_userName" class="bottom-label" for="userName"></label> 
       </div>
-            <div class="form-floating col-lg-6">
+            <div class="form-floating col-lg-6"><span id="valID_email" class="position-absolute top-100 start-0 translate-middle-y ms-2 badge rounded-pill bg-danger"></span>
       <input onclick="clearInvalid(this.id)" type="text" aria-label="Last name" class="form-control" placeholder="E-Mail" name="email" id="email">
       <label for="email">E-Mail</label>
-      <label  id="valID_email" class="bottom-label" for="email"></label> 
       </div>
     </div>
   
-    <div class="input-group mb-3">
-      <div class="form-floating col-lg-6 mb-3">
+    <div class="input-group my-3">
+      <div class="form-floating col-lg-6"><span id="valID_password" class="position-absolute top-100 start-0 translate-middle-y ms-2 badge rounded-pill bg-danger"></span>
       <input onclick="clearInvalid(this.id)" type="text" aria-label="addresse" class="form-control" placeholder="Passwort" name="password" id="password">
       <label for="password">Passwort</label>
-      <label  id="valID_password" class="bottom-label" for="password"></label> 
     </div>
-    <div class="form-floating col-lg-6">
+    <div class="form-floating col-lg-6"><span id="valID_passwordCheck" class="position-absolute top-100 start-0 translate-middle-y ms-2 badge rounded-pill bg-danger"></span>
       <input onclick="clearInvalid(this.id)" type="text" aria-label="addresse" class="form-control" placeholder="Passwort wiederholen" name="passwordCheck" id="passwordCheck">
       <label for="passwordCheck">Passwort wiederholen</label>
-      <label  id="valID_passwordCheck" class="bottom-label" for="lastName"></label> 
    </div>
 </div>
 
@@ -177,52 +166,46 @@
 
   <h2>Zahlungsangaben</h2>
 
-  <div class="input-group">
-    <div class="form-floating col-lg-3 mt-3">
+  <div class="input-group my-3">
+    <div class="form-floating col-lg-3"><span id="valID_paymentMethode" class="position-absolute top-100 start-0 translate-middle-y ms-2 badge rounded-pill bg-danger"></span>
      <select class="form-select" onclick="clearInvalid(this.id)" id="paymentMethode" name="paymentMethode">
       <option></option>
       <option>Visa</option>
       <option>Mastercard</option>
     </select>
     <label for="paymentMethode">Bezahlart</label>
-    <label id="valID_paymentMethode" class="bottom-label" for="paymentMethode"></label> 
     </div>
     </div>
 
     <div class="input-group my-3">
-      <div class="form-floating col-lg-6 mb-3">
+      <div class="form-floating col-lg-6">
       <input onclick="clearInvalid(this.id)" type="text" aria-label="First name" class="form-control" placeholder="Kreditkartennummer" name="ccN" id="ccN">
-      <label for="ccN">Kreditkartennummer</label>
-      <label  id="valID_ccN" class="bottom-label" for="ccN"></label> 
+      <label for="ccN">Kreditkartennummer<span id="valID_ccN" class="position-absolute top-100 start-0 translate-middle-y ms-2 badge rounded-pill bg-danger"></span></label>
       </div>
       <div class="form-floating col-lg-6">
       <input onclick="clearInvalid(this.id)" type="text" aria-label="Last name" class="form-control" placeholder="Inhaber" name="ccO" id="ccO">
-      <label for="ccO">Inhaber</label>
-      <label  id="valID_ccO" class="bottom-label" for="ccO"></label> 
+      <label for="ccO">Inhaber<span id="valID_ccO" class="position-absolute top-100 start-0 translate-middle-y ms-2 badge rounded-pill bg-danger"></span></label>
       </div>
     </div>
   
-    <div class="input-group mt-3">
-      <div class="form-floating col-lg-6 mb-3">
+    <div class="input-group my-3">
+      <div class="form-floating col-lg-6">
       <input onclick="clearInvalid(this.id)" type="text" aria-label="addresse" class="form-control" placeholder="Ablaufdatum" name="ccED" id="ccED">
-      <label for="ccED">Ablaufdatum</label>
-      <label  id="valID_ccED" class="bottom-label" for="ccED"></label> 
+      <label for="ccED">Ablaufdatum<span id="valID_ccED" class="position-absolute top-100 start-0 translate-middle-y ms-2 badge rounded-pill bg-danger"></span></label>
     </div>
-    <div class="form-floating col-lg-6 mb-3">
+    <div class="form-floating col-lg-6">
       <input onclick="clearInvalid(this.id)" type="text" aria-label="addresse" class="form-control" placeholder="CVV/CVC" name="ccV" id="ccV">
-      <label for="ccV">CVV/CVC</label>
-      <label  id="valID_ccV" class="bottom-label" for="ccV"></label> 
+      <label for="ccV">CVV/CV<span id="valID_ccV" class="position-absolute top-100 start-0 translate-middle-y ms-2 badge rounded-pill bg-danger"></span></label>
    </div>
    </div>
 
 <!-- form checks -->
 
-<h2 class="my-3">Abschlussbestimmung</h2>
+<h2 class="mt-3">Abschlussbestimmung</h2>
   
       <div class="form-check">
       <input onclick="clearInvalid(this.id)" type="checkbox" class="form-check-input " id="agb" name="agb">
-      <label class="form-check-label" for="agb">Ich akzeptiere die AGBs</label>
-      <label id="valID_agb" class="bottom-label2" for="agb"></label>
+      <label class="form-check-label" for="agb">Ich akzeptiere die AGBs<span id="valID_agb" class="bottom-label2 ms-1 badge rounded-pill text-white bg-danger"></span></label>
     </div>
    
         <div class="form-check">
